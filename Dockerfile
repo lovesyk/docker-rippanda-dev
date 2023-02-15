@@ -1,10 +1,10 @@
 # build
-FROM maven:3-openjdk-11 AS build
+FROM maven:3-eclipse-temurin-17 AS build
 RUN git clone --depth 1 --single-branch https://github.com/lovesyk/rippanda.git \
  && mvn -f /rippanda/pom.xml package
 
 # package
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:17
 ENV LANG C.UTF-8
 
 COPY --from=build /rippanda/target/rippanda-*.jar /usr/local/lib/rippanda.jar
