@@ -1,6 +1,6 @@
 # docker-rippanda-dev
 ## Description
-This is the official development docker image for [rippanda](https://github.com/lovesyk/rippanda) based on OpenJDK 11.
+This is the development docker image for [rippanda](https://github.com/lovesyk/rippanda) based on Eclipse Temurin JDK17.
 
 It builds a fresh copy of the tool using the master branch.
 
