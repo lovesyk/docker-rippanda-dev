@@ -21,9 +21,6 @@ services:
       - type: bind
         source: /mnt/storage/success-dir
         target: /success-dir
-      - type: bind
-        source: /mnt/storage/log-dir
-        target: /log-dir
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
       - /usr/share/zoneinfo:/usr/share/zoneinfo:ro
