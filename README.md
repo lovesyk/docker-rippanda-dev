@@ -6,14 +6,13 @@ It builds a fresh copy of the tool using the master branch.
 
 ## Example docker-compose.yml
 ```
-version: "2.4"
-
 services:
   rippanda:
-    build: ../../images/rippanda
-    container_name: rippanda
+    build: .
     network_mode: host
     user: 1000:1000
+    environment:
+      TZ: "UTC"
     volumes:
       - type: bind
         source: /mnt/storage/archive-dir
@@ -21,9 +20,6 @@ services:
       - type: bind
         source: /mnt/storage/success-dir
         target: /success-dir
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - /usr/share/zoneinfo:/usr/share/zoneinfo:ro
 ```
 
 ## Example run
